@@ -1,1 +1,2 @@
-172.31.82.163
+[local]
+localhost ansible_python_interpreter="/usr/bin/python3.8"
