@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   become: yes
-  become_user: ec2-user
+  #become_user: ec2-user
   tasks:
     - name: Build an image and push it to a private repo
       docker_image:
@@ -24,8 +24,8 @@
     - debug:
         var: out
     - name: Create a Deployment by reading the definition from a local file
-      command: kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f
-        /var/lib/jenkins/workspace/projectbuild/target/deployment.yml
+      command: kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f /var/lib/jenkins/workspace/projectbuild/target/deployment.yml
+      become_user: ec2-user
       register: out
     - debug:
         var: out
