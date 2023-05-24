@@ -24,7 +24,7 @@
         var: out
     - name: Create a Deployment by reading the definition from a local file
       command: kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f
-        /home/edureka/Desktop/deployment.yml
+        /var/lib/jenkins/workspace/projectbuild/target/deployment.yml
       register: out
     - debug:
         var: out
