@@ -7,7 +7,7 @@
       docker_image:
         build:
           path: "/var/lib/jenkins/workspace/projectbuild/target"
-        name: docker.io/pkamoh/abctechnologies:$BUILD_NUMBER
+        name: docker.io/pkamoh/abctechnologies
         push: true
         source: build
       register: out
@@ -16,7 +16,7 @@
     - name: start a container
       docker_container:
         name: abc-application
-        image: pkamoh/abctechnologies:$BUILD_NUMBER
+        image: pkamoh/abctechnologies
         state: started
         ports:
           - 1234:8080
