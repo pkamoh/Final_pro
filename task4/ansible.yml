@@ -16,6 +16,8 @@
    #   register: out
     #- debug:
      #   var: out
+    - name: login to dockerhub
+      command: sudo docker login -u pkamoh -p AAnishigB923191212
     - name: push the image
       command: sudo docker push pkamoh/abctechnologies
     - name: start a container
