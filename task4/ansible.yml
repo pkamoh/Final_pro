@@ -4,7 +4,7 @@
   #become_user: ec2-user
   tasks:
     - name: check user
-      command: whoami
+      command: whoami > sample.txt
     - name: Build an image and push it to a private repo
       docker_image:
         build:
