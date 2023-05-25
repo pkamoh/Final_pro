@@ -6,7 +6,7 @@
     #- name: check user
      # command: whoami > sample.txt
     - name: Build an image and push it to a private repo
-      command: sudo docker build -t pkamoh/abctechnologies .
+      command: sudo docker build -f sample -t pkamoh/abctechnologies .
      #docker_image:
 #        build:
  #         path: "/home/edureka/Desktop"
